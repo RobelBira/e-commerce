@@ -1,38 +1,174 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-size: small; */
+  font-style: oblique;
+
+  
+}
+/* button{
+  cursor: pointer;
+  color: rgb(24, 160, 160);
+  border: #667;
+ background-color: rgb(230, 215, 196);
+} */
+a {
+  /* color: darkslategray; */
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Style the header */
+header {
+  background-color:#eff3c8;
+  padding: 30px;
   text-align: center;
+  font-size: 35px;
+  color: rgb(109, 71, 71);
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 1fr 0.1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header a {
+  color: rgb(71, 67, 67);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+margin-left: 1px;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#search input {
+  margin-left: 10px;
+  height: 30px;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#headerHomeIcon {
+  justify-self: start;
+}
+
+#headerTitle {
+  justify-self: center;
+}
+
+#headerCartIcon {
+  justify-self: end;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+article {
+  /* display: -webkit-flex;
+  display: flex;
+  gap: 80px;
+  padding: 20px;
+  font-size: 12px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 0.25;
+  column-gap: 180px;
+  padding: 20px;
+  font-size: 12px;
+  
+}
+.category-product-title{
+  grid-column: 1 / span 3;
+ color:blue;
+ font-weight: bold;
+ font-size: 1.5em;
+ padding-left: 10px;
+ 
+}
+.category-product-image-container{
+  padding: 10px;
+  width: 60%;
+}
+img{
+  width: 380px;
+  height: 300px;
+}
+/* img{
+  width: 150px;
+  padding-top: 20px;
+} */
+ 
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 0.5;
+  -ms-flex: 0.5;
+  flex: 0.1;
+  background: #e4d2c7;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav ul li {
+  padding-bottom: 15px;
+  margin-top: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+}
+
+nav ul li:hover {
+  color: rgb(16, 16, 17);
+}
+
+main {
+  flex: 0.9;
+  padding-top: 20px;
+  min-height:  fit-content;;
+
+}
+
+/* Style the footer */
+footer {
+    background-color: #eff3c8;
+  padding: 10px;
+  text-align: center;
+color: rgb(61, 42, 42);
+}
+
+
+footer a {
+  color: rgb(109, 71, 71);
+  font-weight: bold;
+  
+}
+/* img{
+  width: 150px;
+  padding-top: 20px;
+} */
+.block{
+  padding: auto;
+  justify-items: auto;
+}
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 750px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
-  }
+    article {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      display: block;
+    }
 }
